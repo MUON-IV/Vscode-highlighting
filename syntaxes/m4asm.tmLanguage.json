@@ -38,7 +38,7 @@
 			},
 			{
 				"name": "support.function.m4asm",
-				"match": "^[a-zA-Z0-9]*\\:"
+				"match": "^[a-zA-Z0-9_\\-]*\\:"
 			},
 			{
 				"name": "support.function.m4asm",
