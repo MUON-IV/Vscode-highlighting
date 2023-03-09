@@ -1,0 +1,25 @@
+{
+  "name": "MUON-IV-assembler",
+  "displayName": "MUON-IV assembler",
+  "description": "a syntax highlighter for MUON-IV assembly",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "m4asm",
+      "aliases": ["MUON-IV assembly", "m4asm"],
+      "extensions": [".asm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "m4asm",
+      "scopeName": "scope.m4asm",
+      "path": "./syntaxes/m4asm.tmLanguage.json"
+    }]
+  }
+}
