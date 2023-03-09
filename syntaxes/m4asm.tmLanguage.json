@@ -42,15 +42,15 @@
 			},
 			{
 				"name": "support.function.m4asm",
-				"match": "[\\[\\(](0x[A-fA-F0-9]+|0b[01]+|[0-9]+)[\\]\\)]"
+				"match": "[\\[\\(](0x[A-fA-F0-9-_]+|0b[01]+|[0-9]+)[\\]\\)]"
 			},
 			{
 				"name": "support.function.m4asm",
-				"match": "\\s[\\[\\(\\@]{1}[a-zA-Z0-9]+[\\]\\)]{0,}"
+				"match": "\\s[\\[\\(\\@]{1}[a-zA-Z0-9-_]+[\\]\\)]{0,}"
 			},
 			{
 				"name": "support.function.m4asm",
-				"match": "(?<=(jmp|call)\\s+)[a-zA-Z0-9]+"
+				"match": "(?<=(jmp|call)\\s+)[a-zA-Z0-9-_]+"
 			},
 			{
 				"name": "entity.name.label",
