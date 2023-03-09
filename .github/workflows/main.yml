@@ -1,0 +1,14 @@
+name: Pack extension
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.6.0
+        
+      - name: Install vsce
+        run: npm install --global @vscode/vsce
+        
+      - name: Pack extension
+        run: vsce package
