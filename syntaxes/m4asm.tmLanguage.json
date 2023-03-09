@@ -4,28 +4,59 @@
 	"patterns": [
 		{
 			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
+				"name": "storage.type.int.m4asm",
+				"match": "^(mov|MOV|emovl|EMOVL|IMOV|imov|mmov|MMOV|emovs|EMOVS|iemovs|IEMOVS|IEMOVL|iemovl|memovs|memovl|MEMOVS|MEMOVL)"
+			},
+			{
 				"name": "keyword.control.m4asm",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.m4asm",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.m4asm",
-					"match": "\\\\."
-				}
-			]
+				"match": "(PUSH|POP|push|pop|SSP|ssp|call|CALL|ret|RET|JMP|jmp|IEN|ien|SINT|sint|brchi|BRCHI|BRCHF|brchf)"
+		        },	
+  			{
+				"name": "comment.quoted.double.m4asm",
+				"match": ";.*$"
+			},
+			{
+				"name": "keyword.control.m4asm",
+				"match": "(SHR|SHL|XOR|OR|NOR|INC|NAND|XNOR|NOT|ROL|ROR|shr|shl|xor|or|nor|inc|nand|xnor|not|rol|ror)"
+			},
+			{
+				"name": "support.constant.math.m4asm",
+				"match": "(ADD|add|SUB|sub|ADC|adc|SUC|suc)"
+		    },
+			{
+				"name": "support.class.m4asm",
+				"match": "((r1[0-5])|(r[0-9]))"
+			},
+			{
+				"name": "variable.m4asm",
+				"match": "\\s(0x[A-fA-F0-9]+|0b[01]+)"
+			},
+			{
+				"name": "support.function.m4asm",
+				"match": "^[a-zA-Z0-9]*\\:"
+			},
+			{
+				"name": "support.function.m4asm",
+				"match": "[\\[\\(](0x[A-fA-F0-9]+|0b[01]+|[0-9]+)[\\]\\)]"
+			},
+			{
+				"name": "support.function.m4asm",
+				"match": "\\s[\\[\\(\\@]{1}[a-zA-Z0-9]+[\\]\\)]{0,}"
+			},
+			{
+				"name": "support.function.m4asm",
+				"match": "(?<=(jmp|call)\\s+)[a-zA-Z0-9]+"
+			},
+			{
+				"name": "entity.name.label",
+				"match": "^(nop|NOP|dw|DW)"
+			}
+		]
 		}
 	},
 	"scopeName": "scope.m4asm"
