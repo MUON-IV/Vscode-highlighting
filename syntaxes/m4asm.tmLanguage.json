@@ -14,20 +14,16 @@
 			},
 			{
 				"name": "keyword.control.m4asm",
-				"match": "(PUSH|POP|push|pop|SSP|ssp|call|CALL|ret|RET|JMP|jmp|IEN|ien|SINT|sint|brchi|BRCHI|BRCHF|brchf)"
+				"match": "^(PUSH|POP|push|pop|SSP|ssp|call|CALL|ret|RET|JMP|jmp|IEN|ien|SINT|sint|brchi|BRCHI|BRCHF|brchf)"
 		        },	
   			{
 				"name": "comment.quoted.double.m4asm",
 				"match": ";.*$"
 			},
 			{
-				"name": "keyword.control.m4asm",
-				"match": "(SHR|SHL|XOR|OR|NOR|INC|NAND|XNOR|NOT|ROL|ROR|shr|shl|xor|or|nor|inc|nand|xnor|not|rol|ror)"
+				"name": "constant.character.character-class.regexp.m4asm",
+				"match": "^(SHR|SHL|XOR|OR|NOR|INC|NAND|XNOR|NOT|ROL|ROR|shr|shl|xor|or|nor|inc|nand|xnor|not|rol|ror|ADD|add|SUB|sub|SUC|suc|ADC|adc)"
 			},
-			{
-				"name": "support.constant.math.m4asm",
-				"match": "(ADD|add|SUB|sub|ADC|adc|SUC|suc)"
-		    },
 			{
 				"name": "support.class.m4asm",
 				"match": "((r1[0-5])|(r[0-9]))"
