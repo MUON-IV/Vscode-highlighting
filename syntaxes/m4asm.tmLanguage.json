@@ -10,7 +10,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "storage.type.int.m4asm",
-				"match": "^(mov|MOV|emovl|EMOVL|IMOV|imov|mmov|MMOV|emovs|EMOVS|iemovs|IEMOVS|IEMOVL|iemovl|memovs|memovl|MEMOVS|MEMOVL)"
+				"match": "^(mov|MOV|IMOV|imov|mmov|MMOV)"
 			},
 			{
 				"name": "keyword.control.m4asm",
@@ -22,7 +22,7 @@
 			},
 			{
 				"name": "constant.character.character-class.regexp.m4asm",
-				"match": "^(SHR|SHL|XOR|OR|NOR|INC|NAND|XNOR|NOT|ROL|ROR|shr|shl|xor|or|nor|inc|nand|xnor|not|rol|ror|ADD|add|SUB|sub|SUC|suc|ADC|adc)"
+				"match": "^(SHR|SHL|XOR|OR|NOR|INC2|DEC2|dec2|inc2|inc|dec|INC|DEC|NAND|XNOR|NOT|ROL|ROR|shr|shl|xor|or|nor|inc|nand|xnor|not|rol|ror|ADD|add|SUB|sub|SUC|suc|ADC|adc)"
 			},
 			{
 				"name": "support.class.m4asm",
@@ -46,7 +46,7 @@
 			},
 			{
 				"name": "support.function.m4asm",
-				"match": "(?<=(jmp|call)\\s+)[a-zA-Z0-9_\\-]++"
+				"match": "(?<=(jmp|call|brchf|brchi)\\s+)[a-zA-Z0-9_\\-]++"
 			},
 			{
 				"name": "entity.name.label",
